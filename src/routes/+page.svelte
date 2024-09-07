@@ -39,5 +39,22 @@
 
 <!-- Body -->
 <div class="container mx-auto px-5">
-  
+  <!-- Hero -->
+  <div class="flex flex-col-reverse lg:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 lg:h-screen mt-14 lg:mt-0">
+    <div class="w-full lg:w-1/2 justify-center md:text-left">
+      <h1 class="text-4xl xl:text-5xl font-bold my-6 text-center lg:text-start">App Title</h1>
+      <p class="text-lg text-gray-600 text-center lg:text-start">How it can help..</p>
+      <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 my-8">
+        <a href="/" class="">
+          <img class="w-1/2 lg:w-3/4 border rounded-lg mx-auto lg:mx-0" src="/google_store.png" alt="Google Play Store Button" />
+        </a>
+        <a href="/" class="">
+          <img class="w-1/2 lg:w-3/4 rounded-lg border mx-auto lg:mx-0" src="/apple_store.png" alt="Google Play Store Button" />
+        </a>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2">
+      <img class="h-auto rounded-lg w-3/4 mx-auto" src="/mobile_app.jpg" alt="mobile app" />
+    </div>
+  </div>
 </div>
