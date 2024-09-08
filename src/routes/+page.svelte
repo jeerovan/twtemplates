@@ -130,10 +130,10 @@
       <p class="text-xl text-gray-600 text-center lg:text-start dark:text-slate-400">How it can help..</p>
       <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 my-8">
         <a href="/" class="">
-          <img class="w-1/2 md:w-1/3 lg:w-3/4 border rounded-lg mx-auto lg:mx-0" src="/google_store.png" alt="Google Play Store Button" />
+          <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/google_store.png" alt="Google Play Store Button" />
         </a>
         <a href="/" class="">
-          <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg border mx-auto lg:mx-0" src="/apple_store.png" alt="Google Play Store Button" />
+          <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/apple_store.png" alt="Google Play Store Button" />
         </a>
       </div>
     </div>
@@ -152,8 +152,8 @@
     <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">Features</h2>
     <p class="mx-auto text-xl max-w-screen-lg text-gray-600 text-center dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="py-10"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center max-w-screen-xl mx-auto">
-      <div class="bg-white dark:bg-slate-900 px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center max-w-screen-xl mx-auto bg-slate-100 dark:bg-slate-900 rounded-xl">
+      <div class="px-6 py-8">
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -166,7 +166,7 @@
           Lorem ipsum dolor sit amet. Aut ipsa ducimus ea repellat consequatur est numquam Quis.
         </p>
       </div>
-      <div class="bg-white dark:bg-slate-900 px-6 py-8">
+      <div class="px-6 py-8">
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -179,7 +179,7 @@
           Lorem ipsum dolor sit amet. Aut ipsa ducimus ea repellat consequatur est numquam Quis.
         </p>
       </div>
-      <div class="bg-white dark:bg-slate-900 px-6 py-8">
+      <div class="px-6 py-8">
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -192,7 +192,7 @@
           Lorem ipsum dolor sit amet. Aut ipsa ducimus ea repellat consequatur est numquam Quis.
         </p>
       </div>
-      <div class="bg-white dark:bg-slate-900 px-6 py-8">
+      <div class="px-6 py-8">
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -229,7 +229,7 @@
     <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">What our users say</h2>
     <div class="py-10"></div>
     <div class="max-w-screen-md mx-auto relative p-6 h-64">
-      <div class="absolute transition-transform duration-500 ease-in-out transform {swipeEffectClass}">
+      <div class="absolute transition-transform duration-500 ease-in-out transform {swipeEffectClass} bg-slate-100 dark:bg-slate-900 p-10 rounded-xl">
         <div class="flex items-center">
           <svg class="w-4 h-4 text-red-600 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
               <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
@@ -267,7 +267,7 @@
     <div class="py-8"></div>
     <div id="pricing" class="py-10 px-5 max-w-screen-xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between">
-        <div class="border rounded-2xl p-10">
+        <div class="border rounded-2xl p-10 dark:border-slate-700">
           <h3 class="text-xl font-medium dark:text-white">Freelancer</h3>
           <p class=" mt-5 dark:text-slate-400">The essentials for your creativity.</p>
           <p class="mt-5 dark:text-slate-400">
@@ -276,7 +276,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-primary-400 dark:text-white hover:border-primary-700 dark:border-primary-600 dark:hover:border-primary-500">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
@@ -296,7 +296,7 @@
             </li>
           </ul>
         </div>
-        <div class="border rounded-2xl p-10">
+        <div class="border rounded-2xl p-10 dark:border-slate-700">
           <h3 class="text-xl font-medium dark:text-white">Startup</h3>
           <p class="mt-5 dark:text-slate-400">Lets fuel your engine.</p>
           <p class="mt-5 dark:text-slate-400">
@@ -305,7 +305,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-primary-400 dark:text-white hover:border-primary-700 dark:border-primary-600 dark:hover:border-primary-500">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
@@ -325,7 +325,7 @@
             </li>
           </ul>
         </div>
-        <div class="border rounded-2xl p-10">
+        <div class="border rounded-2xl p-10 dark:border-slate-700">
           <h3 class="text-xl font-medium dark:text-white">Enterprise</h3>
           <p class="mt-5 dark:text-slate-400">Pillars for your infrastructure</p>
           <p class="mt-5 dark:text-slate-400">
@@ -334,7 +334,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-primary-400 dark:text-white hover:border-primary-700 dark:border-primary-600 dark:hover:border-primary-500">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
