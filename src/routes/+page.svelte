@@ -85,8 +85,14 @@
     }, 500); // Delay to match the transition duration
   }
   
+  /**
+	 * @type {number | null}
+	 */
   let openIndex = null; // Track the currently open FAQ
   // Toggle the FAQ answer visibility
+  /**
+	 * @param {number} index
+	 */
   function toggleFaq(index) {
     if (openIndex === index) {
       openIndex = null; // If the same FAQ is clicked again, close it
@@ -95,8 +101,61 @@
     }
   }
 
+  let formData = { name : '', email : '', city : '', state : ''};
+  let popupModal = false;
+  let modalClass = "hidden";
+  let modalTitle = "Title";
+  // @ts-ignore
+  let modalMessage = "Message";
+  async function submitForm() {
+    showModal("Form Submitted","We'll get back to you soon! Thank You.")
+  }
+  // @ts-ignore
+  async function showModal(title,message){
+    modalTitle = title;
+    modalMessage = message;
+    popupModal = true;
+    modalClass = "";
+  }
+  async function closeModal(){
+    popupModal = false;
+    modalClass = "hidden";
+  }
+
+
 </script>
 
+<!-- Modal -->
+<div class="{modalClass} fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <!-- Modal Content -->
+  <div class="bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-lg w-full max-w-md">
+    <!-- Header -->
+    <div class="flex justify-between items-center p-4 border-b dark:border-gray-700">
+      <h3 class="text-lg font-semibold">{modalTitle}</h3>
+      <button on:click={closeModal} class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Description -->
+    <div class="p-4">
+      <p class="text-gray-600 dark:text-gray-400">
+        {modalMessage}
+      </p>
+    </div>
+    
+    <!-- Footer Button -->
+    <div class="flex justify-end p-4 border-t dark:border-gray-700">
+      <button on:click={closeModal} class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Page -->
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" class="flex items-center space-x-3">
@@ -137,7 +196,7 @@
   <div class="mb-32 md:mb-10 flex flex-col-reverse lg:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 lg:h-screen mt-14 lg:mt-0">
     <div class="w-full lg:w-1/2 justify-center items-center md:text-left">
       <h1 class="text-4xl xl:text-5xl font-bold my-6 text-center lg:text-start dark:text-white">App Title</h1>
-      <p class="text-xl text-gray-600 text-center lg:text-start dark:text-slate-400">How it can help..</p>
+      <p class="text-xl text-gray-600 text-center lg:text-start dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 my-8">
         <a href="/" class="">
           <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/google_store.png" alt="Google Play Store Button" />
@@ -379,7 +438,7 @@
           </svg>
         </div>
         <div class="{`${openIndex === 0 ? '' : 'hidden'}`}">
-          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-900">
             <p class="mb-2 text-gray-500 dark:text-gray-400">Your app is awesome.</p>
             <p class="text-gray-500 dark:text-gray-400">Check out this guide to <a href="/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start using it.</p>
           </div>
@@ -393,7 +452,7 @@
           </svg>
         </div>
         <div class={`${openIndex === 1 ? '' : 'hidden'}`}>
-          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-900">
             <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <p class="text-gray-500 dark:text-gray-400">Check out the <a href="/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on lorem ipsum guide.</p>
           </div>
@@ -407,7 +466,7 @@
           </svg>
         </div>
         <div class={`${openIndex === 2 ? '' : 'hidden'}`}>
-          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-900">
             <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these features:</p>
             <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
@@ -425,12 +484,42 @@
           </svg>
         </div>
         <div class={`${openIndex === 3 ? '' : 'hidden'}`}>
-          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-900">
             <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="mb-2 text-gray-500 dark:text-gray-400">check out the plans in pricing section.</p>
           </div>
         </div>
       </button>
+    </div>
+  </div>
+  <!-- Contact-->
+  <div class="mb-32">
+    <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">Contact</h2>
+    <div class="py-8"></div>
+    <div class="max-w-screen-xl mx-auto px-5">
+      <div class="mx-auto w-full lg:w-1/2 border rounded-lg py-10 px-5 dark:border-slate-700">
+        <form method="post" on:submit|preventDefault={submitForm}>
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            <input id="name" placeholder="Name" bind:value={formData.name} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
+          </div>
+          <div class="mb-6">
+            <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+            <input id="email" placeholder="Email" bind:value={formData.email} required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
+          </div>
+          <div class="mb-6 grid grid-cols-1 md:grid-cols-2 md:gap-5">
+            <div class="mb-6">
+              <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+              <input id="city" placeholder="City" bind:value={formData.city} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
+            </div>
+            <div class="mb-6">
+              <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
+              <input id="state" placeholder="State" bind:value={formData.state} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "/>
+            </div>
+          </div>
+          <button type="submit" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
