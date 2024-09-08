@@ -84,16 +84,26 @@
       }, 10); // Small timeout to trigger the next animation
     }, 500); // Delay to match the transition duration
   }
+  
+  let openIndex = null; // Track the currently open FAQ
+  // Toggle the FAQ answer visibility
+  function toggleFaq(index) {
+    if (openIndex === index) {
+      openIndex = null; // If the same FAQ is clicked again, close it
+    } else {
+      openIndex = index; // Open the clicked FAQ and close others
+    }
+  }
 
 </script>
 
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/AbonaLogo.webp" class="h-8" alt="Flowbite Logo">
+  <a href="/" class="flex items-center space-x-3">
+      <img src="/AbonaLogo.webp" class="h-8" alt="Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
   </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+  <div class="flex md:order-2 space-x-3 md:space-x-0">
       <DarkMode />
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -103,7 +113,7 @@
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
         <a href="/" class="block py-2 px-3 text-primary-500 hover:text-primary-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
       </li>
@@ -124,7 +134,7 @@
 <!-- Body -->
 <div class="container mx-auto px-5 md:pt-10">
   <!-- Hero -->
-  <div class="flex flex-col-reverse lg:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 lg:h-screen mt-14 lg:mt-0">
+  <div class="mb-32 md:mb-10 flex flex-col-reverse lg:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 lg:h-screen mt-14 lg:mt-0">
     <div class="w-full lg:w-1/2 justify-center items-center md:text-left">
       <h1 class="text-4xl xl:text-5xl font-bold my-6 text-center lg:text-start dark:text-white">App Title</h1>
       <p class="text-xl text-gray-600 text-center lg:text-start dark:text-slate-400">How it can help..</p>
@@ -148,7 +158,7 @@
     </div>
   </div>
   <!-- Features -->
-  <div class="mb-20">
+  <div class="mb-32">
     <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">Features</h2>
     <p class="mx-auto text-xl max-w-screen-lg text-gray-600 text-center dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="py-10"></div>
@@ -225,9 +235,8 @@
     </div>
   </div>
   <!-- Testimonials -->
-  <div class="mb-20">
+  <div class="mb-64">
     <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">What our users say</h2>
-    <div class="py-10"></div>
     <div class="max-w-screen-md mx-auto relative p-6 h-64">
       <div class="absolute transition-transform duration-500 ease-in-out transform {swipeEffectClass} bg-slate-100 dark:bg-slate-900 p-10 rounded-xl">
         <div class="flex items-center">
@@ -355,6 +364,73 @@
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- FAQs -->
+  <div class="mb-32">
+    <h2 class="text-center text-3xl lg:text-4xl py-5 font-bold dark:text-white">FAQs</h2>
+    <div class="py-8"></div>
+    <div class="max-w-screen-xl mx-auto px-5">
+      <button type="button" class="w-full text-start" on:click={() => toggleFaq(0)} role="tablist" tabindex="0">
+        <div class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 rounded-t-xl dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+          <h3>What is your app?</h3>
+          <svg data-accordion-icon class="transition-transform duration-300 w-3 h-3 {openIndex === 0 ? '' : 'rotate-180'} shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </div>
+        <div class="{`${openIndex === 0 ? '' : 'hidden'}`}">
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Your app is awesome.</p>
+            <p class="text-gray-500 dark:text-gray-400">Check out this guide to <a href="/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start using it.</p>
+          </div>
+        </div>
+      </button>
+      <button type="button" class="w-full text-start" on:click={() => toggleFaq(1)} role="tablist" tabindex="0">
+        <div class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+          <h3>Is there a Figma file available?</h3>
+          <svg data-accordion-icon class="transition-transform duration-300 w-3 h-3 {openIndex === 1 ? '' : 'rotate-180'} shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </div>
+        <div class={`${openIndex === 1 ? '' : 'hidden'}`}>
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p class="text-gray-500 dark:text-gray-400">Check out the <a href="/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on lorem ipsum guide.</p>
+          </div>
+        </div>
+      </button>
+      <button type="button" class="w-full text-start" on:click={() => toggleFaq(2)} role="tablist" tabindex="0">
+        <div class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+          <h3>How to use your app?</h3>
+          <svg data-accordion-icon class="transition-transform duration-300 w-3 h-3 {openIndex === 2 ? '' : 'rotate-180'} shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </div>
+        <div class={`${openIndex === 2 ? '' : 'hidden'}`}>
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these features:</p>
+            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+              <li><a href="/" class="text-blue-600 dark:text-blue-500 hover:underline">Go magical</a></li>
+              <li><a href="/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Onboarding</a></li>
+            </ul>
+          </div>
+        </div>
+      </button>
+      <button type="button" class="w-full text-start" on:click={() => toggleFaq(3)} role="tablist" tabindex="0">
+        <div class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+          <h3>Do you have a free plan?</h3>
+          <svg data-accordion-icon class="transition-transform duration-300 w-3 h-3 {openIndex === 3 ? '' : 'rotate-180'} shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+          </svg>
+        </div>
+        <div class={`${openIndex === 3 ? '' : 'hidden'}`}>
+          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">check out the plans in pricing section.</p>
+          </div>
+        </div>
+      </button>
     </div>
   </div>
 </div>
