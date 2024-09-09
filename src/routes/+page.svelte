@@ -249,7 +249,7 @@
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"></path>
             </svg>
           </span>
         </div>
@@ -262,7 +262,7 @@
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"></path>
             </svg>
           </span>
         </div>
@@ -275,7 +275,7 @@
         <div>
           <span class="inline-flex items-center justify-center p-2 bg-primary-500 rounded-md shadow-lg">
             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path>
             </svg>
           </span>
         </div>
@@ -539,9 +539,9 @@
                 <span aria-hidden="true" class="h-4 w-4 {formPolicyAgreed ? 'translate-x-3.5' : 'translate-x-0'} transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
               </button>
             </div>
-            <label for="default-input" class="text-sm leading-6 text-gray-600" id="switch-1-label">
+            <label for="default-input" class="text-sm leading-6 text-gray-600 dark:text-slate-400" id="switch-1-label">
               By selecting this, you agree to our
-              <a href="/" class="font-semibold text-blue-500">privacy&nbsp;policy</a>.
+              <a href="/" class="font-semibold dark:text-slate-200 hover:underline">privacy&nbsp;policy</a>.
             </label>
           </div>
           <div class="py-6"></div>
