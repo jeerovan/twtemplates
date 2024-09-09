@@ -178,13 +178,15 @@
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-3">
-      <img src="/my-app.webp" height="40px;" width="40px;" class="rounded-full" alt="Logo">
+      <img src="/my-app.webp" height="35px;" width="35px;" class="rounded-full" alt="Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MyApp</span>
     </a>
     
     <!-- Hamburger Icon -->
     <div class="flex md:order-2 space-x-3 md:space-x-0">
-      <DarkMode />
+      <div class="mr-4">
+        <DarkMode />
+      </div>
       <button 
         on:click={toggleMenu} 
         type="button" 
