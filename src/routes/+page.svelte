@@ -225,7 +225,7 @@
 </nav>
 
 <!-- Body -->
-<div class="container mx-auto px-5 md:pt-10">
+<div class="container mx-auto px-5 md:pt-10 bg-transparent">
   <!-- Hero -->
   <div class="mb-32 md:mb-10 flex flex-col-reverse lg:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 lg:h-screen mt-14 lg:mt-0">
     <div class="w-full lg:w-1/2 justify-center items-center md:text-left">
@@ -242,7 +242,7 @@
     </div>
     <div class="w-full lg:w-1/2">
       <!-- Image -->
-      <img width="340" height="519" class="rounded-lg mx-auto shadow-lg" src="/mobile/app.webp" alt="mobile app" />
+      <img width="340" height="519" class="rounded-lg mx-auto shadow-2xl shadow-yellow-200" src="/mobile/app.webp" alt="mobile app" />
       <!-- Video 
       <div class="aspect-video">
         <iframe class="w-full h-full" src="https://www.youtube.com/embed/zyNV17QEikM" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
