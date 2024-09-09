@@ -178,7 +178,7 @@
   <div class="flex flex-wrap items-center justify-between mx-auto p-4">
     <!-- Logo -->
     <a href="/" class="flex items-center space-x-3">
-      <img src="/my-app.webp" height="35px;" width="35px;" class="rounded-full" alt="Logo">
+      <img src="/my-app.webp" height="40" width="40" class="rounded-full" alt="Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MyApp</span>
     </a>
     
@@ -231,18 +231,18 @@
     <div class="w-full lg:w-1/2 justify-center items-center md:text-left">
       <h1 class="text-4xl xl:text-5xl font-bold my-6 text-center lg:text-start dark:text-white">App Title</h1>
       <p class="text-xl text-gray-600 text-center lg:text-start dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 my-8">
+      <div class="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 my-8">
         <a href="/" class="">
-          <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/google_store.webp" alt="Google Play Store Button" />
+          <img width="270"  height="71" class="rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/google_store.webp" alt="Google Play Store Button" />
         </a>
         <a href="/" class="">
-          <img class="w-1/2 md:w-1/3 lg:w-3/4 rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/apple_store.webp" alt="Google Play Store Button" />
+          <img width="270"  height="71" class="rounded-lg ring-1 ring-orange-900 hover:ring-orange-800 mx-auto lg:mx-0" src="/apple_store.webp" alt="Google Play Store Button" />
         </a>
       </div>
     </div>
     <div class="w-full lg:w-1/2">
       <!-- Image -->
-      <img class="h-auto rounded-lg w-3/4 mx-auto shadow-lg xl:w-1/2" src="/mobile/app.webp" alt="mobile app" />
+      <img width="340" height="519" class="rounded-lg mx-auto shadow-lg" src="/mobile/app.webp" alt="mobile app" />
       <!-- Video 
       <div class="aspect-video">
         <iframe class="w-full h-full" src="https://www.youtube.com/embed/zyNV17QEikM" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
