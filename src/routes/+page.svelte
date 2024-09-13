@@ -378,7 +378,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded text-white bg-primary-700 hover:bg-primary-600">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
@@ -407,7 +407,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded text-white bg-primary-700 hover:bg-primary-600">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
@@ -436,7 +436,7 @@
             </span>/year
           </p>
           <div class="flex justify-center items-center md:justify-center space-x-4 py-8">
-            <a href="/" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Buy Plan</a>
+            <a href="/" class="w-full text-center px-4 py-2 rounded text-white bg-primary-700 hover:bg-primary-600">Buy Plan</a>
           </div>
           <ul>
             <li class="mb-5">
@@ -569,7 +569,7 @@
             </label>
           </div>
           <div class="py-6"></div>
-          <button type="submit" class="w-full text-center px-4 py-2 rounded border border-slate-100 dark:text-white hover:border-slate-200 dark:border-slate-800 dark:hover:border-slate-700 bg-slate-50 dark:bg-slate-900">Submit</button>
+          <button type="submit" class="w-full text-center px-4 py-2 rounded text-white bg-primary-700 hover:bg-primary-600">Submit</button>
         </form>
       </div>
     </div>
