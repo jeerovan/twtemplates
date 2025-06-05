@@ -33,6 +33,4 @@ Adapter-Node is already added so you can just run your production version with:
 node build
 ```
 
-> Preview available at https://template.abona.in
-
 ![LightHouse Stats](static/lighthouse.png)
